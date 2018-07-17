@@ -80,6 +80,7 @@
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="css\jquery.gritter.css" />
+    <Content Include="img\logo.jpg" />
     <Content Include="js\Chart.js" />
     <Content Include="js\common-scripts.js" />
     <Content Include="js\gritter-conf.js" />
@@ -174,7 +175,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55353</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
