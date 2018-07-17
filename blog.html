@@ -1,0 +1,294 @@
+﻿<aside class="sidebar-menu">
+    <div id="sidebar" class="nav-collapse" style="overflow: hidden;" tabindex="5000">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+
+            <p class="centered"><a href="#"><img src="images/logo.png" class="img-circle" style="border-radius: 50% !important;" width="60"></a></p>
+            <h5 class="centered">
+
+
+                TONDERAI MUCHADA
+
+
+                <li class="mt">
+                    <a class="active" href="/student_portal_new/DashboardController">
+                        <i class="fa fa-dashboard" style="text-align: left;"></i>
+                        <span>My Portal Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="/student_portal_new/RegistrationPrerequisitesController">
+                        <i class="fa fa-desktop"></i>
+                        <span>New Registration</span>
+                    </a>
+                </li>
+                <!--<li class="sub-menu">
+                    <a href="#" id="uname">
+                        <i class="fa fa-desktop"></i>
+                        <span>New Registration</span>
+                    </a>
+                </li>-->
+                <script>
+                    $(document).ready(function () {
+
+                        $('#uname').live('click', function () {
+                            var regStatus = "PRE-REG";
+
+
+                            if (regStatus === "PRE-REG" || regStatus === "REPEAT") {
+
+                                var today = new Date();
+                                //var tommorow=new Date("Thu May 10 00:00:00 CAT 2018");
+                                var dateFinal = today.toLocaleDateString();
+
+                                var RegStartDate = "Thu May 10 00:00:00 CAT 2018";
+                                var RegEndDate = "Wed May 30 00:00:00 CAT 2018";
+                                //  var dayOfStart=RegStartDate.substr(8,9);
+                                //  var monthOfStart=RegStartDate.substr(4,6);
+                                //  var yearOfStart=RegStartDate.substr(24,27);
+                                /*  var monthOfStartActual;
+
+                                  switch (monthOfStart) {
+case Jan:
+                 monthOfStartActual = "01";
+                 break;
+case Feb:
+                 monthOfStartActual = "02";
+                 break;
+case Mar:
+                 monthOfStartActual = "03";
+                 break;
+case Apr:
+                 monthOfStartActual = "04";
+                 break;
+case May:
+                 monthOfStartActual = "05";
+                 break;
+case Jun:
+                 monthOfStartActual = "06";
+                 break;
+case  Jul:
+                 monthOfStartActual = "07";
+case Aug:
+                 monthOfStartActual = "08";
+                 break;
+case  Sep:
+                 monthOfStartActual = "09";
+case Oct:
+                 monthOfStartActual = "10";
+                 break;
+case  Nov:
+                 monthOfStartActual = "11";
+case Dec:
+                 monthOfStartActual = "12";
+
+}
+                              var FullStartDate=dayOfStart+"/"+monthOfStartActual+"/"+yearOfStart;
+
+                                    alert("today "+dateFinal+"   Start Date "+FullStartDate+"    End Date "+RegEndDate);
+                 **/
+
+                            }
+
+
+                            else {
+                                var today = new Date();
+                                var dateFinal = today.toLocaleDateString();
+
+                                var RegStartDate = "Thu May 10 00:00:00 CAT 2018";
+                                var RegEndDate = "Wed May 30 00:00:00 CAT 2018";
+                                //formatting reg start date
+                                var dayOfStart = RegStartDate.substring(8, 10);
+                                var monthOfStart = RegStartDate.substring(4, 7);
+                                var yearOfStart = RegStartDate.substring(24, 28);
+                                var monthOfStartActual = "";
+
+                                switch (monthOfStart) {
+                                    case "Jan":
+                                        monthOfStartActual = "1";
+                                        break;
+                                    case "Feb":
+                                        monthOfStartActual = "2";
+                                        break;
+                                    case "Mar":
+                                        monthOfStartActual = "3";
+                                        break;
+                                    case "Apr":
+                                        monthOfStartActual = "4";
+                                        break;
+                                    case "May":
+                                        monthOfStartActual = "5";
+                                        break;
+                                    case "Jun":
+                                        monthOfStartActual = "6";
+                                        break;
+                                    case "Jul":
+                                        monthOfStartActual = "7";
+                                    case "Aug":
+                                        monthOfStartActual = "8";
+                                        break;
+                                    case "Sep":
+                                        monthOfStartActual = "9";
+                                    case "Oct":
+                                        monthOfStartActual = "10";
+                                        break;
+                                    case "Nov":
+                                        monthOfStartActual = "11";
+                                        break;
+                                    case "Dec":
+                                        monthOfStartActual = "12";
+
+
+                                }
+                                //formatting reg end date
+                                var dayOfEnd = RegEndDate.substring(8, 10);
+                                var monthOfEnd = RegEndDate.substring(4, 7);
+                                var yearOfEnd = RegEndDate.substring(24, 28);
+                                var monthOfEndActual = "";
+
+                                switch (monthOfEnd) {
+                                    case "Jan":
+                                        monthOfEndActual = "1";
+                                        break;
+                                    case "Feb":
+                                        monthOfEndActual = "2";
+                                        break;
+                                    case "Mar":
+                                        monthOfEndActual = "3";
+                                        break;
+                                    case "Apr":
+                                        monthOfEndActual = "4";
+                                        break;
+                                    case "May":
+                                        monthOfEndActual = "5";
+                                        break;
+                                    case "Jun":
+                                        monthOfEndActual = "6";
+                                        break;
+                                    case "Jul":
+                                        monthOfEndActual = "7";
+                                    case "Aug":
+                                        monthOfEndActual = "8";
+                                        break;
+                                    case "Sep":
+                                        monthOfEndActual = "9";
+                                    case "Oct":
+                                        monthOfEndActual = "10";
+                                        break;
+                                    case "Nov":
+                                        monthOfEndActual = "11";
+                                        break;
+                                    case "Dec":
+                                        monthOfEndActual = "12";
+
+
+                                }
+                                var FullStartDate = monthOfStartActual + "/" + dayOfStart + "/" + yearOfStart;
+                                var FullEndDate = monthOfEndActual + "/" + dayOfEnd + "/" + yearOfEnd;
+                                var StartActual = Date.parse(FullStartDate);
+                                var EndActual = Date.parse(FullEndDate);
+                                var todayActual = Date.parse(dateFinal);
+
+
+                                if (todayActual >= StartActual && todayActual <= EndActual) {
+
+                                    //   alert(monthOfStartActual);
+                                    alert("Today's date  " + StartActual + "  Start Date " + FullStartDate + "    End Date " + FullEndDate);
+                                    //   $('#graduate').modal('show');
+
+                                }
+                                else {
+                                    $('#graduate').modal('show');
+
+                                }
+
+                            }
+
+                        });
+                    });
+                </script>
+
+
+
+
+
+
+
+
+
+                <li class="sub-menu">
+                    <a href="/student_portal_new/NewPaymentsController">
+                        <i class="fa fa-history"></i>
+                        <span>Payments History</span>
+                    </a>
+
+                </li>
+                <li class="sub-menu">
+                    <a href="/student_portal_new/ExamResultsController">
+                        <i class="fa fa-book"></i>
+                        <span>Examinations Results</span>
+                    </a>
+
+                </li>
+                <li class="sub-menu">
+                    <a href="/student_portal_new/NewCoursesController">
+                        <i class="fa fa-tasks"></i>
+                        <span>Continuous Assessment</span>
+                    </a>
+
+                </li>
+                <li class="sub-menu">
+                    <a href="/student_portal_new/TimetableController">
+                        <i class="fa fa-tasks"></i>
+                        <span>Exams Timetable</span>
+                    </a>
+
+                </li>
+                <!--<li class="sub-menu">
+                    <a href="/student_portal_new/SrcController">
+                        <i class="fa fa-tasks"></i>
+                        <span>Meet Your SRC </span>
+                    </a>
+
+                </li>-->
+                <li class="sub-menu">
+                    <a href="http://fundo.nust.ac.zw">
+                        <i class="fa fa-external-link"></i>
+                        <span>NUST E-Learning</span>
+                    </a>
+
+                </li>
+
+
+                <li class="sub-menu">
+                    <a href="http://www.nust.ac.zw">
+                        <i class="fa fa-th"></i>
+                        <span>Main Website</span>
+                    </a>
+
+                </li>
+
+                <li class="sub-menu">
+                    <a href="http://www.nust.ac.zw">
+                        <i class="fa fa-th"></i>
+                        <span>Students Webmail</span>
+                    </a>
+
+                </li>
+
+                <li class="sub-menu">
+                    <a href="http://portal.nust.ac.zw/FAQS">
+                        <i class="fa fa-th"></i>
+                        <span>FAQs</span>
+                    </a>
+
+                </li>
+
+
+
+            </h5>
+        </ul>
+        <!-- sidebar menu end-->
+    </div>
+</aside>
